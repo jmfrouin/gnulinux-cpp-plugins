@@ -12,19 +12,13 @@ int main()
 	Plugin::Plugin* plug2 = Plugin::PluginFactoryManager::instance()->createObject("Plugin2");
 	Plugin::Plugin* plug3 = Plugin::PluginFactoryManager::instance()->createObject("Plugin3");
 
-	if (plug1 != 0)
-	{
+	if (plug1)
 		plug1->action();
-	}
 
-	if (plug2 != 0)
-	{
+	if (plug2)
 		plug2->action();
-	}
 
-	if (plug3 != 0)
-	{
+	if (plug3)
 		plug3->action();
-	}
 	return EXIT_SUCCESS;
 }

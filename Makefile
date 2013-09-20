@@ -18,7 +18,7 @@ plugs/plugin3.so: plugins/plugin3.cpp
 plugins: libmanager.so plugs/plugin1.so plugs/plugin2.so plugs/plugin3.so
 	
 $(EXEC): libmanager.so main.cpp
-	$(CXX) $(CPPFLAGS) -ldl -L. -lmanager -dPIC -fPIC -g main.cpp -o $@
+	$(CXX) $(CPPFLAGS) -ldl -lmanager -L. -dPIC -fPIC -g main.cpp -o $@
 
 clean:
 	rm -f *.o *.so plugs/*.so

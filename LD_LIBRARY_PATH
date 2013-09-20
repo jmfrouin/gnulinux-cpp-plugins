@@ -1,1 +1,2 @@
 Need to be set to . in order to find the shared lib in current folder
+export LD_LIBRARY_PATH=.
